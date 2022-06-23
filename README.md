@@ -95,11 +95,11 @@ QQ交流群：1群：`29850775` 2群：`529914962`
 - Setup environment variables as following:
 
         JAVA_HOME="path to JDK 11"
-        IDEA_HOME_203="path to IDEA 203+"
+        IDEA_HOME_221="path to IDEA 221+"
         
 ## Building
 
-  `./gradlew buildPlugin -DIDEA_VER=203`
+  `./gradlew buildPlugin -DIDEA_VER=221`
 
 ## Developed By
 
