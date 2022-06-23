@@ -41,10 +41,16 @@ class StringLiteralPasteProvider : PasteProvider {
         val content = LuaString.getContent(text)
         val quotes = text.substring(0, content.start)
         var value = clipText
-        if (quotes == "'") {
-            value = value.replace("\'", "\\\'")
-        } else if (quotes == "\"") {
-            value = value.replace("\"", "\\\"")
+        when (quotes) {
+            "'" -> {
+                value = value.replace("\'", "\\\'")
+            }
+            "\"" -> {
+                value = value.replace("\"", "\\\"")
+            }
+            "`" -> {
+                value = value.replace("`", "\\`")
+            }
         }
 
         WriteCommandAction.runWriteCommandAction(editor.project) {

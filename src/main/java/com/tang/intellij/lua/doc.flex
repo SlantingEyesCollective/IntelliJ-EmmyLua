@@ -52,6 +52,7 @@ DOC_DASHES = --+
 //Strings
 DOUBLE_QUOTED_STRING=\"([^\\\"]|\\\S|\\[\r\n])*\"?  //\"([^\\\"\r\n]|\\[^\r\n])*\"?
 SINGLE_QUOTED_STRING='([^\\\']|\\\S|\\[\r\n])*'?    //'([^\\'\r\n]|\\[^\r\n])*'?
+BACKTICK_STRING=`[a-zA-Z0-9]*`?
 
 %state xTAG
 %state xTAG_WITH_ID
@@ -68,6 +69,7 @@ SINGLE_QUOTED_STRING='([^\\\']|\\\S|\\[\r\n])*'?    //'([^\\'\r\n]|\\[^\r\n])*'?
 %state xSUPPRESS
 %state xDOUBLE_QUOTED_STRING
 %state xSINGLE_QUOTED_STRING
+%state xBACKTICK_STRING
 
 %%
 
@@ -159,6 +161,7 @@ SINGLE_QUOTED_STRING='([^\\\']|\\\S|\\[\r\n])*'?    //'([^\\'\r\n]|\\[^\r\n])*'?
     "}"                        { _typeLevel--; _typeReq = false; return RCURLY; }
     "\""                       { yybegin(xDOUBLE_QUOTED_STRING); yypushback(yylength()); }
     "'"                        { yybegin(xSINGLE_QUOTED_STRING); yypushback(yylength()); }
+    "`"                        { yybegin(xBACKTICK_STRING); yypushback(yylength()); }
     "[]"                       { _typeReq = false; return ARR; }
     "fun"                      { return FUN; }
     "vararg"                   { _typeReq = true; return VARARG; }
@@ -171,6 +174,10 @@ SINGLE_QUOTED_STRING='([^\\\']|\\\S|\\[\r\n])*'?    //'([^\\'\r\n]|\\[^\r\n])*'?
 
 <xSINGLE_QUOTED_STRING> {
     {SINGLE_QUOTED_STRING}    { yybegin(xTYPE_REF); return STRING_LITERAL; }
+}
+
+<xBACKTICK_STRING> {
+    {BACKTICK_STRING}         { yybegin(xTYPE_REF); return STRING_LITERAL; }
 }
 
 <xTAG> {

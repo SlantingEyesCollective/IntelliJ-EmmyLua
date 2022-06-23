@@ -124,6 +124,7 @@ private fun MarkdownNode.toHtml(): String {
             MarkdownTokenTypes.COLON,
             MarkdownTokenTypes.SINGLE_QUOTE,
             MarkdownTokenTypes.DOUBLE_QUOTE,
+            MarkdownTokenTypes.BACKTICK,
             MarkdownTokenTypes.LPAREN,
             MarkdownTokenTypes.RPAREN,
             MarkdownTokenTypes.LBRACKET,

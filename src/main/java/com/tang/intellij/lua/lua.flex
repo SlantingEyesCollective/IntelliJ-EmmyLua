@@ -95,12 +95,14 @@ DOC_COMMENT=----*[^\r\n]*(\r?\n{LINE_WS}*----*[^\r\n]*)*
 //Strings
 DOUBLE_QUOTED_STRING=\"([^\\\"]|\\\S|\\[\r\n])*\"?  //\"([^\\\"\r\n]|\\[^\r\n])*\"?
 SINGLE_QUOTED_STRING='([^\\\']|\\\S|\\[\r\n])*'?    //'([^\\'\r\n]|\\[^\r\n])*'?
+BACKTICK_STRING=`[a-zA-Z0-9]*`?
 //[[]]
 LONG_STRING=\[=*\[[\s\S]*\]=*\]
 
 %state xSHEBANG
 %state xDOUBLE_QUOTED_STRING
 %state xSINGLE_QUOTED_STRING
+%state xBACKTICK_STRING
 %state xBLOCK_STRING
 %state xCOMMENT
 %state xBLOCK_COMMENT
@@ -188,6 +190,7 @@ LONG_STRING=\[=*\[[\s\S]*\]=*\]
 
   "\""                        { yybegin(xDOUBLE_QUOTED_STRING); yypushback(yylength()); }
   "'"                         { yybegin(xSINGLE_QUOTED_STRING); yypushback(yylength()); }
+  "`"                         { yybegin(xBACKTICK_STRING); yypushback(yylength()); }
 
   {ID}                        { return ID; }
   {NUMBER}                    { return NUMBER; }
@@ -210,4 +213,8 @@ LONG_STRING=\[=*\[[\s\S]*\]=*\]
 
 <xSINGLE_QUOTED_STRING> {
     {SINGLE_QUOTED_STRING}    { yybegin(YYINITIAL); return STRING; }
+}
+
+<xBACKTICK_STRING> {
+    {BACKTICK_STRING}         { yybegin(YYINITIAL); return STRING; }
 }
