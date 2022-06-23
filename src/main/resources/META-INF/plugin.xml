@@ -16,13 +16,13 @@
 
 <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
     <id>com.korioz</id>
-    <name>EmmyLua</name>
+    <name>cfxEmmyLua</name>
     <version>1.3.6</version>
     <vendor email="45950144+Korioz@users.noreply.github.com">Korioz</vendor>
     <category>Custom Languages</category>
     <description><![CDATA[
     Support for Lua programming language.<br>
-    <p><a href="https://github.com/EmmyLua">Source Code</a> | <a href="https://gitter.im/emmylua/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link">Gitter</a> | <a href="https://emmylua.github.io/donate.html">Donate</a> | <a href="https://emmylua.github.io/?plugin">Doc</a> | <a href="https://github.com/EmmyLua/VSCode-EmmyLua">VSCode-EmmyLua</a></p>
+    <p><a href="https://github.com/SlantingEyesCollective/IntelliJ-EmmyLua">Source Code</a> | <a href="https://emmylua.github.io/donate.html">Donate</a> | <a href="https://emmylua.github.io/?plugin">Doc</a> | <a href="https://github.com/EmmyLua/VSCode-EmmyLua">VSCode-EmmyLua</a></p>
     Features:
     <ul>
         <li>Syntax highlighting</li>

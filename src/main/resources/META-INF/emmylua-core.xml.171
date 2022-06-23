@@ -163,7 +163,7 @@
         <!--lua settings-->
         <applicationService serviceImplementation="com.korioz.intellij.lua.project.LuaSettings"/>
         <applicationConfigurable groupId="language"
-                                 displayName="EmmyLua"
+                                 displayName="cfxEmmyLua"
                                  id="preferences.Lua"
                                  instance="com.korioz.intellij.lua.project.LuaSettingsPanel">
             <!--<configurable instance="com.korioz.intellij.lua.project.CompletionSettingsPanel"

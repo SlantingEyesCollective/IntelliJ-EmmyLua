@@ -1,5 +1,5 @@
 ![logo](/snapshot/logo.png)
-# EmmyLua for IntelliJ IDEA
+# cfxEmmyLua for IntelliJ IDEA
 
 [![Build status](https://ci.appveyor.com/api/projects/status/m25uajpqa2fft8ah?svg=true)](https://ci.appveyor.com/project/EmmyLua/intellij-emmylua)
 [![Online EmmyLua Doc](https://img.shields.io/badge/emmy-doc-46BC99.svg?style=flat-square)](https://emmylua.github.io)
