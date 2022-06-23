@@ -1,5 +1,5 @@
 <!--
-  ~ Copyright (c) 2017. tangzx(love.tangzx@qq.com)
+  ~ Copyright (c) 2022. Korioz(45950144+Korioz@users.noreply.github.com)
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -18,19 +18,19 @@
     <depends>com.intellij.modules.lang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <projectViewPane implementation="com.tang.intellij.lua.project.LuaProjectViewPane"/>
-        <iconProvider implementation="com.tang.intellij.lua.project.LuaSourceRootIconProvider"/>
+        <projectViewPane implementation="com.korioz.intellij.lua.project.LuaProjectViewPane"/>
+        <iconProvider implementation="com.korioz.intellij.lua.project.LuaSourceRootIconProvider"/>
     </extensions>
 
     <actions>
         <group id="lua.ProjectViewPopupMenu">
             <separator/>
             <add-to-group group-id="ProjectViewPopupMenu"/>
-            <action class="com.tang.intellij.lua.actions.MarkLuaSourceRootAction"
+            <action class="com.korioz.intellij.lua.actions.MarkLuaSourceRootAction"
                     text="Mark as Lua Source Root"
                     id="lua.project.markSourceRoot"/>
 
-            <action class="com.tang.intellij.lua.actions.UnmarkLuaSourceRootAction"
+            <action class="com.korioz.intellij.lua.actions.UnmarkLuaSourceRootAction"
                     text="Unmark as Lua Source Root"
                     id="lua.project.unmarkSourceRoot"/>
             <reference ref="lua.LuaCheck"/>

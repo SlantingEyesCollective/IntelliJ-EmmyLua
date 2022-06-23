@@ -1,5 +1,5 @@
 <!--
-  ~ Copyright (c) 2017. tangzx(love.tangzx@qq.com)
+  ~ Copyright (c) 2022. Korioz(45950144+Korioz@users.noreply.github.com)
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -15,10 +15,10 @@
   -->
 
 <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
-    <id>com.tang</id>
+    <id>com.korioz</id>
     <name>EmmyLua</name>
     <version>1.3.6</version>
-    <vendor email="love.tangzx@qq.com">tangzx</vendor>
+    <vendor email="45950144+Korioz@users.noreply.github.com">Korioz</vendor>
     <category>Custom Languages</category>
     <description><![CDATA[
     Support for Lua programming language.<br>

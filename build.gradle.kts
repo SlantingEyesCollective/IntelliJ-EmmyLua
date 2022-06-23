@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017. tangzx(love.tangzx@qq.com)
+ * Copyright (c) 2022. Korioz(45950144+Korioz@users.noreply.github.com)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -132,11 +132,11 @@ if (isCI) {
         System.getenv("APPVEYOR_BUILD_VERSION")
     exec {
         executable = "git"
-        args("config", "--global", "user.email", "love.tangzx@qq.com")
+        args("config", "--global", "user.email", "45950144+Korioz@users.noreply.github.com")
     }
     exec {
         executable = "git"
-        args("config", "--global", "user.name", "tangzx")
+        args("config", "--global", "user.name", "korioz")
     }
 }
 

@@ -1,5 +1,5 @@
 <!--
-  ~ Copyright (c) 2017. tangzx(love.tangzx@qq.com)
+  ~ Copyright (c) 2022. Korioz(45950144+Korioz@users.noreply.github.com)
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 <idea-plugin>
     <extensions defaultExtensionNs="com.intellij">
-        <moduleType id="LUA_MODULE" implementationClass="com.tang.intellij.lua.project.LuaModuleType"/>
-        <moduleConfigurationEditorProvider implementation="com.tang.intellij.lua.project.LuaModuleConfigurationEditorProvider"/>
+        <moduleType id="LUA_MODULE" implementationClass="com.korioz.intellij.lua.project.LuaModuleType"/>
+        <moduleConfigurationEditorProvider implementation="com.korioz.intellij.lua.project.LuaModuleConfigurationEditorProvider"/>
     </extensions>
 </idea-plugin>
