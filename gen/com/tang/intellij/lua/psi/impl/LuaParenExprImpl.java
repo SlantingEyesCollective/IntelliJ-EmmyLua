@@ -16,8 +16,8 @@ import com.tang.intellij.lua.stubs.LuaExprStub;
 
 public class LuaParenExprImpl extends LuaParenExprMixin implements LuaParenExpr {
 
-  public LuaParenExprImpl(@NotNull LuaExprPlaceStub stub, @NotNull IStubElementType<?, ?> nodeType) {
-    super(stub, nodeType);
+  public LuaParenExprImpl(@NotNull LuaExprPlaceStub stub, @NotNull IStubElementType<?, ?> type) {
+    super(stub, type);
   }
 
   public LuaParenExprImpl(@NotNull ASTNode node) {
@@ -32,6 +32,7 @@ public class LuaParenExprImpl extends LuaParenExprMixin implements LuaParenExpr 
     visitor.visitParenExpr(this);
   }
 
+  @Override
   public void accept(@NotNull PsiElementVisitor visitor) {
     if (visitor instanceof LuaVisitor) accept((LuaVisitor)visitor);
     else super.accept(visitor);

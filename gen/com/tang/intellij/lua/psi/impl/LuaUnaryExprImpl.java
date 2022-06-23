@@ -16,8 +16,8 @@ import com.tang.intellij.lua.stubs.LuaExprStub;
 
 public class LuaUnaryExprImpl extends LuaUnaryExprMixin implements LuaUnaryExpr {
 
-  public LuaUnaryExprImpl(@NotNull LuaUnaryExprStub stub, @NotNull IStubElementType<?, ?> nodeType) {
-    super(stub, nodeType);
+  public LuaUnaryExprImpl(@NotNull LuaUnaryExprStub stub, @NotNull IStubElementType<?, ?> type) {
+    super(stub, type);
   }
 
   public LuaUnaryExprImpl(@NotNull ASTNode node) {
@@ -32,6 +32,7 @@ public class LuaUnaryExprImpl extends LuaUnaryExprMixin implements LuaUnaryExpr 
     visitor.visitUnaryExpr(this);
   }
 
+  @Override
   public void accept(@NotNull PsiElementVisitor visitor) {
     if (visitor instanceof LuaVisitor) accept((LuaVisitor)visitor);
     else super.accept(visitor);

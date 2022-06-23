@@ -15,8 +15,8 @@ import com.intellij.psi.tree.IElementType;
 
 public class LuaDoStatImpl extends LuaStatMixin<LuaPlaceholderStub> implements LuaDoStat {
 
-  public LuaDoStatImpl(@NotNull LuaPlaceholderStub stub, @NotNull IStubElementType<?, ?> nodeType) {
-    super(stub, nodeType);
+  public LuaDoStatImpl(@NotNull LuaPlaceholderStub stub, @NotNull IStubElementType<?, ?> type) {
+    super(stub, type);
   }
 
   public LuaDoStatImpl(@NotNull ASTNode node) {
@@ -31,6 +31,7 @@ public class LuaDoStatImpl extends LuaStatMixin<LuaPlaceholderStub> implements L
     visitor.visitDoStat(this);
   }
 
+  @Override
   public void accept(@NotNull PsiElementVisitor visitor) {
     if (visitor instanceof LuaVisitor) accept((LuaVisitor)visitor);
     else super.accept(visitor);

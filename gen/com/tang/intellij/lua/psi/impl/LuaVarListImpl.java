@@ -15,7 +15,7 @@ import com.tang.intellij.lua.stubs.LuaPlaceholderStub;
 
 public class LuaVarListImpl extends LuaExprListImpl implements LuaVarList {
 
-  public LuaVarListImpl(@NotNull LuaPlaceholderStub stub, @NotNull IStubElementType type) {
+  public LuaVarListImpl(@NotNull LuaPlaceholderStub stub, @NotNull IStubElementType<?, ?> type) {
     super(stub, type);
   }
 
@@ -27,10 +27,12 @@ public class LuaVarListImpl extends LuaExprListImpl implements LuaVarList {
     super(stub, type, node);
   }
 
+  @Override
   public void accept(@NotNull LuaVisitor visitor) {
     visitor.visitVarList(this);
   }
 
+  @Override
   public void accept(@NotNull PsiElementVisitor visitor) {
     if (visitor instanceof LuaVisitor) accept((LuaVisitor)visitor);
     else super.accept(visitor);

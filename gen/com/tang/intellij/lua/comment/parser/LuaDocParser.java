@@ -65,7 +65,7 @@ public class LuaDocParser implements PsiParser, LightPsiParser {
     Marker m = enter_section_(b, l, _NONE_);
     r = doc_item(b, l + 1);
     if (!r) r = consumeToken(b, STRING);
-    exit_section_(b, l, m, r, false, after_dash_recover_parser_);
+    exit_section_(b, l, m, r, false, LuaDocParser::after_dash_recover);
     return r;
   }
 
@@ -1078,9 +1078,4 @@ public class LuaDocParser implements PsiParser, LightPsiParser {
     return r;
   }
 
-  static final Parser after_dash_recover_parser_ = new Parser() {
-    public boolean parse(PsiBuilder b, int l) {
-      return after_dash_recover(b, l + 1);
-    }
-  };
 }

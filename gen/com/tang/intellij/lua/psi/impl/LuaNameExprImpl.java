@@ -18,8 +18,8 @@ import com.tang.intellij.lua.stubs.LuaExprStub;
 
 public class LuaNameExprImpl extends LuaNameExprMixin implements LuaNameExpr {
 
-  public LuaNameExprImpl(@NotNull LuaNameExprStub stub, @NotNull IStubElementType<?, ?> nodeType) {
-    super(stub, nodeType);
+  public LuaNameExprImpl(@NotNull LuaNameExprStub stub, @NotNull IStubElementType<?, ?> type) {
+    super(stub, type);
   }
 
   public LuaNameExprImpl(@NotNull ASTNode node) {
@@ -34,6 +34,7 @@ public class LuaNameExprImpl extends LuaNameExprMixin implements LuaNameExpr {
     visitor.visitNameExpr(this);
   }
 
+  @Override
   public void accept(@NotNull PsiElementVisitor visitor) {
     if (visitor instanceof LuaVisitor) accept((LuaVisitor)visitor);
     else super.accept(visitor);

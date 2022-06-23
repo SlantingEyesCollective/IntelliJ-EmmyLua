@@ -15,7 +15,7 @@ import com.tang.intellij.lua.stubs.LuaPlaceholderStub;
 
 public class LuaSingleArgImpl extends LuaArgsImpl implements LuaSingleArg {
 
-  public LuaSingleArgImpl(@NotNull LuaPlaceholderStub stub, @NotNull IStubElementType type) {
+  public LuaSingleArgImpl(@NotNull LuaPlaceholderStub stub, @NotNull IStubElementType<?, ?> type) {
     super(stub, type);
   }
 
@@ -27,10 +27,12 @@ public class LuaSingleArgImpl extends LuaArgsImpl implements LuaSingleArg {
     super(stub, type, node);
   }
 
+  @Override
   public void accept(@NotNull LuaVisitor visitor) {
     visitor.visitSingleArg(this);
   }
 
+  @Override
   public void accept(@NotNull PsiElementVisitor visitor) {
     if (visitor instanceof LuaVisitor) accept((LuaVisitor)visitor);
     else super.accept(visitor);

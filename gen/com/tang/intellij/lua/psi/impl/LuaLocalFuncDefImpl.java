@@ -20,7 +20,7 @@ import com.intellij.psi.tree.IElementType;
 
 public class LuaLocalFuncDefImpl extends StubBasedPsiElementBase<LuaLocalFuncDefStub> implements LuaLocalFuncDef {
 
-  public LuaLocalFuncDefImpl(@NotNull LuaLocalFuncDefStub stub, @NotNull IStubElementType type) {
+  public LuaLocalFuncDefImpl(@NotNull LuaLocalFuncDefStub stub, @NotNull IStubElementType<?, ?> type) {
     super(stub, type);
   }
 
@@ -36,6 +36,7 @@ public class LuaLocalFuncDefImpl extends StubBasedPsiElementBase<LuaLocalFuncDef
     visitor.visitLocalFuncDef(this);
   }
 
+  @Override
   public void accept(@NotNull PsiElementVisitor visitor) {
     if (visitor instanceof LuaVisitor) accept((LuaVisitor)visitor);
     else super.accept(visitor);

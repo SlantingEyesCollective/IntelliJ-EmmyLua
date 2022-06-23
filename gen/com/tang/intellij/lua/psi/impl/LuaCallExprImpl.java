@@ -18,8 +18,8 @@ import com.tang.intellij.lua.stubs.LuaExprStub;
 
 public class LuaCallExprImpl extends LuaCallExprMixin implements LuaCallExpr {
 
-  public LuaCallExprImpl(@NotNull LuaExprPlaceStub stub, @NotNull IStubElementType<?, ?> nodeType) {
-    super(stub, nodeType);
+  public LuaCallExprImpl(@NotNull LuaExprPlaceStub stub, @NotNull IStubElementType<?, ?> type) {
+    super(stub, type);
   }
 
   public LuaCallExprImpl(@NotNull ASTNode node) {
@@ -34,6 +34,7 @@ public class LuaCallExprImpl extends LuaCallExprMixin implements LuaCallExpr {
     visitor.visitCallExpr(this);
   }
 
+  @Override
   public void accept(@NotNull PsiElementVisitor visitor) {
     if (visitor instanceof LuaVisitor) accept((LuaVisitor)visitor);
     else super.accept(visitor);

@@ -16,7 +16,7 @@ import com.intellij.psi.tree.IElementType;
 
 public abstract class LuaArgsImpl extends StubBasedPsiElementBase<LuaPlaceholderStub> implements LuaArgs {
 
-  public LuaArgsImpl(@NotNull LuaPlaceholderStub stub, @NotNull IStubElementType type) {
+  public LuaArgsImpl(@NotNull LuaPlaceholderStub stub, @NotNull IStubElementType<?, ?> type) {
     super(stub, type);
   }
 
@@ -32,6 +32,7 @@ public abstract class LuaArgsImpl extends StubBasedPsiElementBase<LuaPlaceholder
     visitor.visitArgs(this);
   }
 
+  @Override
   public void accept(@NotNull PsiElementVisitor visitor) {
     if (visitor instanceof LuaVisitor) accept((LuaVisitor)visitor);
     else super.accept(visitor);
