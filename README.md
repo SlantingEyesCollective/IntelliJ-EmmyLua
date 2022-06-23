@@ -103,7 +103,7 @@ QQ交流群：1群：`29850775` 2群：`529914962`
 
 ## Developed By
 
-[**@Korioz** 阿唐](https://github.com/Korioz)
+[**@SlantingEyesCollective** 阿唐](https://github.com/SlantingEyesCollective)
 
 **Contributors**
 - [**@dsmgit** dsmgit](https://github.com/dsmgit)
