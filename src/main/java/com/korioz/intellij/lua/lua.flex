@@ -95,7 +95,7 @@ DOC_COMMENT=----*[^\r\n]*(\r?\n{LINE_WS}*----*[^\r\n]*)*
 //Strings
 DOUBLE_QUOTED_STRING=\"([^\\\"]|\\\S|\\[\r\n])*\"?  //\"([^\\\"\r\n]|\\[^\r\n])*\"?
 SINGLE_QUOTED_STRING='([^\\\']|\\\S|\\[\r\n])*'?    //'([^\\'\r\n]|\\[^\r\n])*'?
-BACKTICK_STRING=`[a-zA-Z0-9]*`?
+BACKTICK_STRING=`[a-zA-Z0-9_]*`?
 //[[]]
 LONG_STRING=\[=*\[[\s\S]*\]=*\]
 

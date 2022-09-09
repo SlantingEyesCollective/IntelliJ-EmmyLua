@@ -37,10 +37,12 @@ class LuaFileManager : ApplicationComponent, FileTypeListener {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun initComponent() {
         myMessageBus.connect().subscribe(FileTypeManager.TOPIC, this)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun disposeComponent() {
     }
 

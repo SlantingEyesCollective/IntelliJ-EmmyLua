@@ -51,6 +51,7 @@ class LuaSdkType : SdkType("Lua SDK") {
 
     override fun getIcon(): Icon = LuaIcons.FILE
 
+    @Deprecated("Deprecated in Java")
     override fun getIconForAddAction(): Icon = LuaIcons.FILE
 
     companion object {

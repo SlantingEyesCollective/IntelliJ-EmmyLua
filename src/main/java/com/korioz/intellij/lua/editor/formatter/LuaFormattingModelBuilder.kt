@@ -32,6 +32,7 @@ import com.korioz.intellij.lua.psi.LuaTypes.*
  * Created by Korioz on 2016/12/3.
  */
 class LuaFormattingModelBuilder : FormattingModelBuilder {
+    @Deprecated("Deprecated in Java")
     override fun createModel(element: PsiElement, settings: CodeStyleSettings): FormattingModel {
         val commonSettings = settings.getCommonSettings(LuaLanguage.INSTANCE)
         val luaSettings = settings.getCustomSettings(LuaCodeStyleSettings::class.java)

@@ -23,6 +23,7 @@ import com.korioz.intellij.lua.psi.LuaFuncBody
 
 class LuaFunContextType : TemplateContextType("LUA_FUNCTION", "function", LuaCodeContextType::class.java) {
 
+    @Deprecated("Deprecated in Java")
     override fun isInContext(psiFile: PsiFile, i: Int): Boolean {
         return PsiTreeUtil.findElementOfClassAtOffset(psiFile, i, LuaFuncBody::class.java, false) != null
     }

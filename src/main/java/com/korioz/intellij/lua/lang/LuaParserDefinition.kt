@@ -70,6 +70,7 @@ class LuaParserDefinition : ParserDefinition {
         return LuaPsiFile(viewProvider)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun spaceExistanceTypeBetweenTokens(left: ASTNode, right: ASTNode): ParserDefinition.SpaceRequirements {
         return ParserDefinition.SpaceRequirements.MAY
     }

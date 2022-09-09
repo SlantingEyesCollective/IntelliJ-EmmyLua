@@ -31,6 +31,7 @@ import com.korioz.intellij.lua.psi.LuaTypes
  */
 class LuaCodeContextType : TemplateContextType("LUA_CODE", "Lua") {
 
+    @Deprecated("Deprecated in Java")
     override fun isInContext(file: PsiFile, offset: Int): Boolean {
         if (PsiUtilCore.getLanguageAtOffset(file, offset).isKindOf(LuaLanguage.INSTANCE)) {
             val element = file.findElementAt(offset)

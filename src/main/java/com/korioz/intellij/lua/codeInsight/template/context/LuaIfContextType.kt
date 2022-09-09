@@ -27,6 +27,7 @@ import com.korioz.intellij.lua.psi.LuaIfStat
  */
 class LuaIfContextType : TemplateContextType("LUA_IF", "If statement", LuaCodeContextType::class.java) {
 
+    @Deprecated("Deprecated in Java")
     override fun isInContext(psiFile: PsiFile, i: Int): Boolean {
         return PsiTreeUtil.findElementOfClassAtOffset(psiFile, i, LuaIfStat::class.java, false) != null
     }

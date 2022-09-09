@@ -34,14 +34,17 @@ data class ParameterInfoType(val sig: IFunSignature, val isColonStyle: Boolean)
  * Created by Korioz on 2016/12/25.
  */
 class LuaParameterInfoHandler : ParameterInfoHandler<LuaArgs, ParameterInfoType> {
+    @Deprecated("Deprecated in Java")
     override fun couldShowInLookup(): Boolean {
         return false
     }
 
+    @Deprecated("Deprecated in Java")
     override fun getParametersForLookup(lookupElement: LookupElement, parameterInfoContext: ParameterInfoContext): Array<Any>? {
         return emptyArray()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun getParametersForDocumentation(o: ParameterInfoType, parameterInfoContext: ParameterInfoContext): Array<Any>? {
         return emptyArray()
     }
@@ -85,10 +88,12 @@ class LuaParameterInfoHandler : ParameterInfoHandler<LuaArgs, ParameterInfoType>
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun getParameterCloseChars(): String? {
         return ",()"
     }
 
+    @Deprecated("Deprecated in Java")
     override fun tracksParameterIndex(): Boolean {
         return true
     }

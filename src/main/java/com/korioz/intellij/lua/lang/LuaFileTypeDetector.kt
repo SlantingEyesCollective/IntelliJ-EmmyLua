@@ -23,6 +23,7 @@ import com.intellij.openapi.util.io.FileUtil
 import com.intellij.openapi.vfs.VirtualFile
 
 class LuaFileTypeDetector : FileTypeRegistry.FileTypeDetector {
+    @Deprecated("Deprecated in Java")
     override fun getVersion() = 1
 
     override fun detect(file: VirtualFile, firstBytes: ByteSequence, firstCharsIfText: CharSequence?): FileType? {

@@ -30,6 +30,7 @@ import com.korioz.intellij.lua.lang.LuaLanguage
  * Created by Korioz on 2017/2/22.
  */
 class LuaCodeStyleSettingsProvider : CodeStyleSettingsProvider() {
+    @Deprecated("Deprecated in Java")
     override fun createSettingsPage(settings: CodeStyleSettings, originalSettings: CodeStyleSettings): Configurable {
         return object : CodeStyleAbstractConfigurable(settings, originalSettings, "EmmyLua") {
 

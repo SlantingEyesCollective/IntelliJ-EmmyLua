@@ -28,10 +28,12 @@ import com.intellij.openapi.projectRoots.impl.ProjectJdkImpl
  */
 class StdSDK : ApplicationComponent {
 
+    @Deprecated("Deprecated in Java")
     override fun initComponent() {
         sdk
     }
 
+    @Deprecated("Deprecated in Java")
     override fun disposeComponent() {
 
     }
