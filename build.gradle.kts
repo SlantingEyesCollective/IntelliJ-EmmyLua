@@ -30,7 +30,7 @@ data class BuildData(
     val ideaSDKVersion: String,
     val sinceBuild: String,
     val untilBuild: String,
-    val archiveName: String = "IntelliJ-cfxEmmyLua",
+    val archiveName: String = "cfxEmmyLua",
     val jvmTarget: String = "1.8",
     val targetCompatibilityLevel: JavaVersion = JavaVersion.VERSION_11,
     val explicitJavaDependency: Boolean = true,

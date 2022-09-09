@@ -1,7 +1,7 @@
 ![logo](/snapshot/logo.png)
 # cfxEmmyLua for IntelliJ IDEA
 
-[![Build status](https://github.com/SlantingEyesCollective/IntelliJ-EmmyLua/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/SlantingEyesCollective/IntelliJ-EmmyLua/actions/workflows/build.yml)
+[![Build status](https://github.com/SlantingEyesCollective/cfxEmmyLua/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/SlantingEyesCollective/IntelliJ-EmmyLua/actions/workflows/build.yml)
 [![EmmyLua Doc](https://img.shields.io/badge/emmy-doc-46BC99.svg?style=flat-square)](https://emmylua.github.io)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/9768-emmylua.svg?style=flat-square)](https://plugins.jetbrains.com/plugin/9768-emmylua)
 [![Jetbrains plugin](https://img.shields.io/jetbrains/plugin/v/9768-emmylua.svg?style=flat-square)](https://plugins.jetbrains.com/plugin/9768-emmylua)
