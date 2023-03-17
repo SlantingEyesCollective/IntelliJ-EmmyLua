@@ -190,7 +190,7 @@ project(":") {
     intellij {
         type.set("IU")
         updateSinceUntilBuild.set(false)
-        downloadSources.set(false)
+        downloadSources.set(!isCI)
         version.set(buildVersionData.ideaSDKVersion)
         sandboxDir.set("${project.buildDir}/${buildVersionData.ideaSDKShortVersion}/idea-sandbox")
     }
