@@ -19,7 +19,7 @@ import org.apache.tools.ant.taskdefs.condition.Os
 import java.io.ByteArrayOutputStream
 
 plugins {
-    id("org.jetbrains.intellij").version("1.9.0")
+    id("org.jetbrains.intellij").version("1.13.2")
     id("org.jetbrains.kotlin.jvm").version("1.7.10")
     id("de.undercouch.download").version("3.4.3")
 }
@@ -32,13 +32,19 @@ data class BuildData(
     val untilBuild: String,
     val archiveName: String = "cfxEmmyLua",
     val jvmTarget: String = "1.8",
-    val targetCompatibilityLevel: JavaVersion = JavaVersion.VERSION_11,
+    val targetCompatibilityLevel: JavaVersion = JavaVersion.VERSION_17,
     val explicitJavaDependency: Boolean = true,
     // https://github.com/JetBrains/gradle-intellij-plugin/issues/403#issuecomment-542890849
     val instrumentCodeCompilerVersion: String = ideaSDKVersion
 )
 
 val buildDataList = listOf(
+    BuildData(
+        ideaSDKShortVersion = "223",
+        ideaSDKVersion = "2022.3",
+        sinceBuild = "223",
+        untilBuild = "223.*"
+    ),
     BuildData(
         ideaSDKShortVersion = "222",
         ideaSDKVersion = "2022.2",

@@ -180,7 +180,7 @@ open class ClassMemberCompletionProvider : LuaCompletionProvider() {
             this.session?.addWord(name)
             fnTy.process(Processor {
 
-                val firstParam = it.getFirstParam(thisType, isColonStyle)
+                val firstParam = it.getFirstParam(thisType)
                 if (isColonStyle) {
                     if (firstParam == null) return@Processor true
                     if (!callType.subTypeOf(firstParam.ty, SearchContext.get(classMember.project), true))

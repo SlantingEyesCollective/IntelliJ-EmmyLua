@@ -79,7 +79,7 @@ fun IFunSignature.processArgs(processor: (index:Int, param: LuaParamInfo) -> Boo
     }
 }
 
-fun IFunSignature.processParams(thisTy: ITy?, colonStyle: Boolean, processor: (index:Int, param: LuaParamInfo) -> Boolean) {
+fun IFunSignature.processParams(thisTy: ITy?, processor: (index: Int, param: LuaParamInfo) -> Boolean) {
     var index = 0
     if (colonCall) {
         val pi = LuaParamInfo.createSelf(thisTy)
@@ -91,9 +91,9 @@ fun IFunSignature.processParams(thisTy: ITy?, colonStyle: Boolean, processor: (i
     }
 }
 
-fun IFunSignature.getFirstParam(thisTy: ITy?, colonStyle: Boolean): LuaParamInfo? {
+fun IFunSignature.getFirstParam(thisTy: ITy?): LuaParamInfo? {
     var pi: LuaParamInfo? = null
-    processParams(thisTy, colonStyle) { _, paramInfo ->
+    processParams(thisTy) { _, paramInfo ->
         pi = paramInfo
         false
     }

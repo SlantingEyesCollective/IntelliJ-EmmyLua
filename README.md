@@ -82,14 +82,14 @@
 
 ## Build environment requirements
 
-- JDK 11
+- JDK 17
 - Setup environment variables as following:
 
-        JAVA_HOME="path to JDK 11"
+        JAVA_HOME="path to JDK 17"
         
 ## Building
 
-  `./gradlew buildPlugin -DIDEA_VER=222`
+  `./gradlew buildPlugin -DIDEA_VER=223`
 
 ## Developed By
 
