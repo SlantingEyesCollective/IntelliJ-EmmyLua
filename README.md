@@ -89,7 +89,7 @@
         
 ## Building
 
-  `./gradlew buildPlugin -DIDEA_VER=223`
+  `./gradlew buildPlugin -DIDEA_VER=231`
 
 ## Developed By
 

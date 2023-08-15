@@ -69,6 +69,10 @@
     ]]></description>
 
     <change-notes><![CDATA[
+    <strong>1.4.2</strong>
+    <ul>
+        <li>[NEW] compatible with IDEA231</li>
+    </ul>
     <strong>1.4.1</strong>
     <ul>
         <li>[NEW] compatible with IDEA223</li>
@@ -107,7 +111,7 @@
     </ul>
     ]]>
     </change-notes>
-    <idea-version since-build="211" until-build="223.*"/>
+    <idea-version since-build="211" until-build="231.*"/>
     <xi:include href="emmylua-core.xml" xpointer="xpointer(/idea-plugin/*)"/>
     <depends optional="true" config-file="emmylua-project.xml">com.intellij.java</depends>
 </idea-plugin>
