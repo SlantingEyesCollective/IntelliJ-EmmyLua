@@ -164,7 +164,7 @@ object LuaExpressionParser {
 
     private fun parseIndexExpr(prefix: PsiBuilder.Marker, b: PsiBuilder, l: Int): PsiBuilder.Marker? {
         when (b.tokenType) {
-            DOT, COLON -> { // left indexExpr ::= '[' expr ']' | '.' ID | ':' ID
+            DOT, COLON, OPTIONAL_CHAIN -> { // left indexExpr ::= '[' expr ']' | '.' ID | ':' ID
                 b.advanceLexer() // . or :
                 expectError(b, ID) { "ID" }
                 val m = prefix.precede()

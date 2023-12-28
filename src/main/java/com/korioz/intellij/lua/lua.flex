@@ -85,6 +85,13 @@ JIT_EXT_NUMBER=(0[xX]{h}|{n})U?LL
 HEX_NUMBER=0[xX]({h}|{h}[.]{h})({exp}|{ppp})?
 NUMBER={JIT_EXT_NUMBER}|{HEX_NUMBER}|({n}|{n}[.]{n}){exp}?|[.]{n}|{n}[.]
 
+//OPTIONNAL CHAINING
+OPTIONAL_CHAIN="?."
+
+//SHORTCUTS
+PLUS_ASSIGN="+="
+MINUS_ASSIGN="-="
+
 //Comments
 REGION_START =--(region|\{\{\{)([^\r\n]*)*
 REGION_END =--(endregion|\}\}\})([^\r\n]*)*
@@ -112,6 +119,10 @@ LONG_STRING=\[=*\[[\s\S]*\]=*\]
   {WHITE_SPACE}               { return TokenType.WHITE_SPACE; }
   {REGION_START}              { return REGION; }
   {REGION_END}                { return ENDREGION; }
+  {OPTIONAL_CHAIN}            { return OPTIONAL_CHAIN; }
+  {PLUS_ASSIGN}          { return PLUS_ASSIGN; }
+  {MINUS_ASSIGN}         { return MINUS_ASSIGN; }
+
   "--"                        {
         boolean block = checkBlock();
         if (block) {
