@@ -72,6 +72,9 @@ public interface LuaTypes {
   IElementType DOT = LuaParserDefinitionKt.createToken(".");
   IElementType DOUBLE_COLON = LuaParserDefinitionKt.createToken("::");
   IElementType DOUBLE_DIV = LuaParserDefinitionKt.createToken("//");
+  IElementType OPTIONAL_CHAIN = LuaParserDefinitionKt.createToken("OPTIONAL_CHAIN");
+  IElementType PLUS_ASSIGN = LuaParserDefinitionKt.createToken("PLUS_ASSIGN");
+  IElementType MINUS_ASSIGN = LuaParserDefinitionKt.createToken("MINUS_ASSIGN");
   IElementType ELLIPSIS = LuaParserDefinitionKt.createToken("...");
   IElementType ELSE = LuaParserDefinitionKt.createToken("else");
   IElementType ELSEIF = LuaParserDefinitionKt.createToken("elseif");
