@@ -192,14 +192,8 @@ class LuaAnnotator : Annotator {
                     }
                     checkUpValue(o)
                 } else {
-                    if (isModuleFile) {
-                        newInfoAnnotation(o, "Module field \"${o.name}\"") {
-                            it.textAttributes(LuaHighlightingData.FIELD)
-                        }
-                    } else {
-                        newInfoAnnotation(o, "Global variable \"${o.name}\"") {
-                            it.textAttributes(LuaHighlightingData.GLOBAL_VAR)
-                        }
+                    newInfoAnnotation(o, "Global variable \"${o.name}\"") {
+                        it.textAttributes(LuaHighlightingData.GLOBAL_VAR)
                     }
                 }
             }
