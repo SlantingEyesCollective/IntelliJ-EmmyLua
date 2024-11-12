@@ -97,3 +97,5 @@
 
 **Contributors**
 - [**Official EmmyLua Contributors**](https://github.com/EmmyLua/IntelliJ-EmmyLua#developed-by)
+
+- JHN
